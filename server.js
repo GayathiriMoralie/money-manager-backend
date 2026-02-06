@@ -15,6 +15,12 @@ app.use(express.json());
 // Routes
 app.use("/api/transactions", transactionRoutes);
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
+
+
 // Port
 const PORT = process.env.PORT || 5000;
 
